@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Meme Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <center>
+        <h1><a href="https://retr0-sec.netlify.app/">Retr0 Za GOAT </a></h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            {% if meme_image %}
+
+            <div>
+                <img src="{{meme_image}}" style="min-width: 200px; max-width: 800px; min-height: 500px; max-height: 600px;">
+            </div>
+    
+            {% endif %}
+
+            <button type="submit" style="padding: 10px;">Generate meme</button>
+
+            <h2>Moggers stay away</h2>
+
+            {% if host_name %}
+            <div>
+                Running on <b>{{host_name}}</b> a <b>{{host_type}}</b>, <b>{{host_arch}}</b> architecture machine
+            </div>
+            {% endif %}
+        </form>
+        <h2>By <a href="https://github.com/Retr0-XD">Retr0</a></h2>
+    </center>
+
+</body>
+</html>
